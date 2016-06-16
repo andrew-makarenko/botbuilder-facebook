@@ -16,6 +16,14 @@
     "chat",
     "microsoft"
   ],
+  "bugs": {
+    "url": "https://github.com/andrew-makarenko/botbuilder-facebook/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrew-makarenko/botbuilder-facebook.git"
+  },
+  "homepage": "https://github.com/andrew-makarenko/botbuilder-facebook",
   "author": "Andrew Makarenko",
   "license": "MIT",
   "devDependencies": {
