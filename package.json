@@ -1,0 +1,30 @@
+{
+  "name": "botbuilder-facebook",
+  "version": "1.0.0",
+  "description": "Facebook Bot connector for MS BotBuilder",
+  "main": "index.js",
+  "engines": {
+    "node": ">=4.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "botbuilder",
+    "facebook",
+    "bot",
+    "chat",
+    "microsoft"
+  ],
+  "author": "Andrew Makarenko",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^2.12.0"
+  },
+  "peerDependencies": {
+    "botbuilder": "1.x"
+  },
+  "dependencies": {
+    "request": "^2.72.0"
+  }
+}
