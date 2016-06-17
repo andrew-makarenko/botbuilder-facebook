@@ -62,6 +62,132 @@
 
   ```
 
+## Message examples
+All examples is done using builder.Message object, but you can use a plain JS object as well.
+Something like this:
+``` javascript
+session.send({
+  attachments: [{
+    thumbnailUrl: "http://petersapparel.parseapp.com/img/item101-thumb.png",
+    title: "Classic Grey T-Shirt",
+    titleLink: "https://petersapparel.parseapp.com/view_item?item_id=101",
+    text: "Soft white cotton t-shirt is back in style"
+  }]
+});
+```
+1. Message with image attachment
+``` javascript
+  var msg = new builder.Message()
+    .addAttachment({
+      contentUrl: "http://www.theoldrobots.com/images62/Bender-18.JPG",
+      contentType: "image/jpeg"
+    });
+  return session.send(msg);
+```
+![alt tag](http://content.screencast.com/users/Makaron/folders/Jing/media/d2b267ad-4c61-407f-ad56-44647f31a03c/00000065.png)
+
+2. Generic template
+``` javascript
+var msg = new builder.Message()
+  .addAttachment({
+      thumbnailUrl: "http://petersapparel.parseapp.com/img/item101-thumb.png",
+      title: "Classic Grey T-Shirt",
+      titleLink: "https://petersapparel.parseapp.com/view_item?item_id=101",
+      text: "Soft white cotton t-shirt is back in style"
+  });
+```
+
+![alt tag](http://content.screencast.com/users/Makaron/folders/Jing/media/465f5429-cfd1-4c6e-8de0-b88f61e7134d/00000066.png)
+
+3. Generic template with Call-To-Action items and bubbles
+``` javascript
+var msg = new builder.Message();
+msg.addAttachment({
+    title: "Classic White T-Shirt",
+    text: "Soft white cotton t-shirt is back in style",
+    thumbnailUrl: "http://petersapparel.parseapp.com/img/item100-thumb.png",
+    actions: [
+        { title: "View Item", url: "https://petersapparel.parseapp.com/view_item?item_id=100" },
+        { title: "Buy Item", message: "buy:100" },
+        { title: "Bookmark Item", message: "bookmark:100" }
+    ]
+});
+msg.addAttachment({
+    title: "Classic Grey T-Shirt",
+    text: "Soft gray cotton t-shirt is back in style",
+    thumbnailUrl: "http://petersapparel.parseapp.com/img/item101-thumb.png",
+    actions: [
+        { title: "View Item", url: "https://petersapparel.parseapp.com/view_item?item_id=101" },
+        { title: "Buy Item", message: "buy:101" },
+        { title: "Bookmark Item", message: "bookmark:101" }
+    ]
+});
+```
+
+![alt tag](http://content.screencast.com/users/Makaron/folders/Jing/media/f82c9c43-b022-439d-87a2-211727d32909/00000067.png)
+
+4. Receipt or any other custom message template
+``` javascript
+var msg = new builder.Message();
+msg.setChannelData({
+    "attachment":{
+        "type":"template",
+        "payload":{
+            "template_type":"receipt",
+            "recipient_name":"Stephane Crozatier",
+            "order_number":"12345678902",
+            "currency":"USD",
+            "payment_method":"Visa 2345",
+            "order_url":"http://petersapparel.parseapp.com/order?order_id=123456",
+            "timestamp":"1428444852",
+            "elements":[
+                {
+                    "title":"Classic White T-Shirt",
+                    "subtitle":"100% Soft and Luxurious Cotton",
+                    "quantity":2,
+                    "price":50,
+                    "currency":"USD",
+                    "image_url":"http://petersapparel.parseapp.com/img/whiteshirt.png"
+                },
+                {
+                    "title":"Classic Gray T-Shirt",
+                    "subtitle":"100% Soft and Luxurious Cotton",
+                    "quantity":1,
+                    "price":25,
+                    "currency":"USD",
+                    "image_url":"http://petersapparel.parseapp.com/img/grayshirt.png"
+                }
+            ],
+            "address":{
+                "street_1":"1 Hacker Way",
+                "street_2":"",
+                "city":"Menlo Park",
+                "postal_code":"94025",
+                "state":"CA",
+                "country":"US"
+            },
+            "summary":{
+                "subtotal":75.00,
+                "shipping_cost":4.95,
+                "total_tax":6.19,
+                "total_cost":56.14
+            },
+            "adjustments":[
+                {
+                    "name":"New Customer Discount",
+                    "amount":20
+                },
+                {
+                    "name":"$10 Off Coupon",
+                    "amount":10
+                }
+            ]
+        }
+    }
+});
+```
+![alt tag](http://content.screencast.com/users/Makaron/folders/Jing/media/6806b527-dc0f-44d6-a5d4-494d29fe889d/00000068.png)
+
 ## License
 
 MIT License
