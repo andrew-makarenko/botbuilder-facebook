@@ -84,7 +84,7 @@ session.send({
     });
   return session.send(msg);
 ```
-![alt tag](http://content.screencast.com/users/Makaron/folders/Jing/media/d2b267ad-4c61-407f-ad56-44647f31a03c/00000065.png)
+<img src="http://content.screencast.com/users/Makaron/folders/Jing/media/d2b267ad-4c61-407f-ad56-44647f31a03c/00000065.png" width="256" alt="example">
 
 2. Generic template
 ``` javascript
@@ -96,8 +96,7 @@ var msg = new builder.Message()
       text: "Soft white cotton t-shirt is back in style"
   });
 ```
-
-![alt tag](http://content.screencast.com/users/Makaron/folders/Jing/media/465f5429-cfd1-4c6e-8de0-b88f61e7134d/00000066.png)
+<img src="http://content.screencast.com/users/Makaron/folders/Jing/media/465f5429-cfd1-4c6e-8de0-b88f61e7134d/00000066.png" width="256" alt="example">
 
 3. Generic template with Call-To-Action items and bubbles
 ``` javascript
@@ -123,8 +122,7 @@ msg.addAttachment({
     ]
 });
 ```
-
-![alt tag](http://content.screencast.com/users/Makaron/folders/Jing/media/f82c9c43-b022-439d-87a2-211727d32909/00000067.png)
+<img src="http://content.screencast.com/users/Makaron/folders/Jing/media/f82c9c43-b022-439d-87a2-211727d32909/00000067.png" width="256" alt="example">
 
 4. Receipt or any other custom message template
 ``` javascript
@@ -186,7 +184,7 @@ msg.setChannelData({
     }
 });
 ```
-![alt tag](http://content.screencast.com/users/Makaron/folders/Jing/media/6806b527-dc0f-44d6-a5d4-494d29fe889d/00000068.png)
+<img src="http://content.screencast.com/users/Makaron/folders/Jing/media/6806b527-dc0f-44d6-a5d4-494d29fe889d/00000068.png" width="256" alt="example">
 
 ## License
 
