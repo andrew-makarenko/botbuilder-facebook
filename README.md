@@ -24,7 +24,7 @@
 
   bot.add('/', session => {
     session.send('Hello!');
-  }
+  });
 
   ```
 
