@@ -2,7 +2,9 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-
+## 1.0.4 2016-11-07
+### Added
+- message.quick_reply.payload is used now instead of message.text for message routing
 
 ## [1.0.3] - 2016-06-17
 ### Added

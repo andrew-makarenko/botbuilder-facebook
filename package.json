@@ -1,6 +1,6 @@
 {
   "name": "botbuilder-facebook",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Facebook Bot connector for MS BotBuilder",
   "main": "index.js",
   "engines": {
