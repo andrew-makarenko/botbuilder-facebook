@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.0.7 2016-11-18
+### Added
+- bot.botService.verifyRequest(appSecret, headers, body) method a helper method to verify the request signature
+
 ## 1.0.6 2016-11-18
 ### Fixed
 - 'TypeError: Cannot read property 'url' of null' at FacebookBot.js:151:22
